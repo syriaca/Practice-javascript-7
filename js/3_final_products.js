@@ -14,9 +14,33 @@ If your program is stuck in an infinite loop, you can break out of the program b
 // -- inventory
 // -- unit_price
 
+const product = [
+    {
+        name: 'apples',
+        inventory: 80,
+        unit_price: 0.3
+    },
+    {
+        name: 'banana',
+        inventory: 400,
+        unit_price: 0.56 
+    },
+    {
+        name: 'pear',
+        inventory: 50,
+        unit_price: 0.6 
+    }
+]
 
 // 3. Create a function named listProducts(). The function should accept 1 parameter -- the array of products. It should return an array of just the names of the products.
 
+let listProducts = (array) => {
+    let productName = [];
+    array.forEach(x => {
+        productName.push(x.name);
+    })
+    console.log(productName);
+}
 
 // 4. Call the listProducts() function and log the returned value to the console.
 
