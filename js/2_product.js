@@ -33,7 +33,7 @@ In this example, "chair" is the name of the product.
 let addInventory = (object, number) => {
     object.inventory += number;
     return console.log(`${number} ${object.name} added to the inventory`);
-}
+};
 // 3. Call the addInventory() function
 addInventory(product, 4);
 
@@ -44,12 +44,16 @@ addInventory(product, 4);
 In this example, "chair" is the name of the product.
 */
 
-let proces
+let processSale = (object, number) => {
+    object.inventory -= number;
+    let totalSale = object.unit_price * number;
+    return console.log(`${number} ${object.name} sold, Total sale: $${totalSale}`);
+};
 
 
 /* 5. Call the processSale() function. When you call the processSale() function log the return value to the console so the message looks something like this:
 "Total sale: $20"
 */
 
-
+processSale(product, 30);
 // 6. Run your code by typing node 2_product.js in the console below
