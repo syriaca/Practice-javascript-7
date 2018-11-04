@@ -47,6 +47,14 @@ let listProducts = (array) => {
 
 // 5. Create a function names totalValue(). The function should accept 1 parameter -- the array of products. It should return the total value of all of the products in the array. You calculate the value of one product by multiplying the inventory value by the unit_price value
 
+let totalValue = (array) => {
+    var total = 0;
+    array.forEach(x => {
+        var sale = x.inventory * x.unit_price;
+        total += sale;
+    })
+    array.totalSale = total;
+}
 
 // 6. Call the totalValue() function and log the returned value to the console.
 
